@@ -1,0 +1,24 @@
+# Refer https://docs.halo.run/developer-guide/plugin/basics/manifest
+
+apiVersion: plugin.halo.run/v1alpha1
+kind: Plugin
+metadata:
+  # The name defines how the plugin is invoked, A unique name
+  name: plugin-tikz
+spec:
+  enabled: true
+  requires: ">=2.22.0"
+  author:
+    name: sqwfly
+    website: https://www.sqwfly.top
+  logo: logo.png
+  homepage: https://www.sqwfly.top
+  repo: https://github.com/sqwfly/halo-plugin-tikz
+  issues: https://github.com/sqwfly/halo-plugin-tikz/issues
+  displayName: "TikZ"
+  description: "为默认编辑器和文章渲染提供 TikZ 支持"
+  settingName: plugin-tikz-settings
+  configMapName: plugin-tikz-configMap
+  license:
+    - name: "GPL-3.0"
+      url: "https://github.com/sqwfly/halo-plugin-tikz/blob/main/LICENSE"

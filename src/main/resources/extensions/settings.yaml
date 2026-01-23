@@ -1,0 +1,14 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: plugin-tikz-settings
+spec:
+  forms:
+    - group: basic
+      label: 基本设置
+      formSchema:
+        - $formkit: text
+          name: tikzRenderApi
+          label: TikZ渲染api
+          value: "https://tikz.sqwfly.top/api/render"
+          help: 为转换TiKZ代码为SVG图像提供后端服务

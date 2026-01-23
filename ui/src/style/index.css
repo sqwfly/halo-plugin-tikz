@@ -1,0 +1,21 @@
+tikz[data-type='tikz'] {
+  display: block;
+  margin: 1em 0;
+}
+
+tikz[data-type='tikz'] svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+tikz[data-type='tikz']:empty {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  tikz[data-type='tikz'] {
+    margin: 0.5em 0;
+  }
+}
