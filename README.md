@@ -1,6 +1,8 @@
 # halo-plugin-tikz
 
-TikZ 插件，实现 TikZ 代码（实际是 LaTex 代码，只不过以 TikZ 宏包为特色，兼容部分其它 LaTex 宏包）在 **默认编辑器** 与文章页的渲染，**TikZ** 是一个基于 LaTeX 的强大绘图宏包，全称为“TikZ ist kein Zeichenprogramm”，意为“TikZ 不是一个绘图程序”。它允许用户通过编写代码来创建高质量的矢量图形，能够将数学公式、物理概念和算法流程转化为 **精美** 的图形。TikZ 的设计理念是用编程的方式描述图形，提供了精确控制和无限扩展的能力，使得用户可以绘制从简单的点线到复杂的数学图形的各种图形。
+TikZ 编辑块 插件，实现 TikZ 代码（实际是 LaTex 代码，只不过以 TikZ 宏包为特色，兼容部分其它 LaTex 宏包）在 **默认编辑器** 与文章页的渲染。
+
+**TikZ** 是一个基于 LaTeX 的强大绘图宏包，全称为“TikZ ist kein Zeichenprogramm”，意为“TikZ 不是一个绘图程序”。它允许用户通过编写代码来创建高质量的矢量图形，能够将数学公式、物理概念和算法流程转化为 **精美** 的图形。TikZ 的设计理念是用编程的方式描述图形，提供了精确控制和无限扩展的能力，使得用户可以绘制从简单的点线到复杂的数学图形的各种图形。
 
 ## 效果预览
 
@@ -23,7 +25,7 @@ TikZ 插件，实现 TikZ 代码（实际是 LaTex 代码，只不过以 TikZ �
 
 ## 使用建议与指南
 
-1. 你可以浏览 [TikZ 官网](https://tikz.dev/) 来学习 TikZ 语法和使用方法，如果你对 TikZ 语法不是很熟悉，可以浏览此网站提供的海量模板 [TikZ Templates](https://texample.net/)，不过该网站提供的大部分模板不能直接使用因为它们用到了本插件所依赖的核心库中部分不可获取的宏包，需要尽心一定的修改
+1. 你可以浏览 [TikZ 官网](https://tikz.dev/) 来学习 TikZ 语法和使用方法，如果你对 TikZ 语法不是很熟悉，可以浏览此网站提供的海量模板 [TikZ Templates](https://texample.net/)，不过该网站提供的大部分模板不能直接使用因为它们用到了本插件所依赖的核心库中部分不可获取的宏包，需要进行一定的修改
 
 2. 配置 TikZ 后端渲染api，后端 TikZ 服务的部署参考我的 [**仓库**](https://github.com/sqwfly/tikz-express) ，或点击 [**Deploy with Vercel**](https://vercel.com/new/git/external?repository-url=https://github.com/sqwfly/tikz-express&project-name=tikz-express&repository-name=tikz-express) 进行部署，使用者需要自己部署，只需要一个 [Vercel](https://vercel.com/) 账号（默认拥有 Github 账号）和一个域名（因为Vercel提供的默认域名在大陆不可访问)，后续我会将自己的api设置为禁止跨域，禁止他人使用
 
@@ -94,7 +96,7 @@ TikZ 插件，实现 TikZ 代码（实际是 LaTex 代码，只不过以 TikZ �
 ## 注意事项
 
 1. 不支持中文字符，一些空行可能会导致渲染失败，$\Omega$ 和 $\otimes$ 会被渲染为：¬，应当避免使用这两个符号
-3. 本插件通过后端部署的 TikZ 服务渲染 TikZ 代码，需要先将 TikZ 代码编译渲染为 DVI 格式文件，然后再将其渲染为 SVG 图片，所以整个过程需要一定的时间，这取决于渲染图形的复杂程度以及后端服务的能力，不过默认编辑器只要拿到渲染的结果，主题端会直接加载其渲染结果，无需主题端二次渲染，对于访客来言是无感的
+2. 本插件通过后端部署的 TikZ 服务渲染 TikZ 代码，需要先将 TikZ 代码编译渲染为 DVI 格式文件，然后再将其渲染为 SVG 图片，所以整个过程需要一定的时间，这取决于渲染图形的复杂程度以及后端服务的能力，不过默认编辑器只要拿到渲染的结果，主题端会直接加载其渲染结果，无需主题端二次渲染，对于访客来言是无感的
 
 ## 与 Typst 编辑块插件有什么不同？
 
